@@ -1,13 +1,12 @@
 package com.company.map;
 
 public class Point2D {
-    private int x;
-    private int y;
+    public int x;
+    public int y;
     private PointType type;
 
-    public Point2D(int x, int y, PointType type) {
+    public Point2D(int x, int y) {
         this.x = x;
         this.y = y;
-        this.type = type;
     }
 }

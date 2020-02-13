@@ -1,25 +1,28 @@
 package com.company;
 
+import com.company.map.Point2D;
+
+import java.awt.*;
 import java.util.List;
 
 public class Car {
-    int x, y;
+    Point2D point2D;
 
     public Car(int x, int y){
-        this.x = x;
-        this.y = y;
+        this.point2D = new Point2D(x, y);
     }
 
     public int getX() {
-        return x;
+        return this.point2D.x;
     }
 
     public int getY() {
-        return y;
+        return this.point2D.y;
     }
 
     void move(int x, int y){
-        this.x += x;
-        this.y += y;
+        int previous_x = getX();
+        int previous_y = getY();
+        this.point2D = new Point2D(previous_x + x, previous_y + y);
     }
 }
